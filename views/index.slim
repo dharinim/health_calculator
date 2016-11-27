@@ -1,0 +1,34 @@
+h2 Enter your details
+// = @myvar
+// ul.tasks
+  // li hello Milk #{@myvar}
+// ul.lists
+// - @lists.each do |a|
+	// li Wait is #{a} 
+// input type="text"
+// input type="submit"
+
+form action="/details" method="get"
+	div
+		ul
+			li
+				label Gender   
+				select name="Gender"
+				  option selected="SELECTED" value="1" Male
+				  option value="2" Female
+				  option value="3" Other
+		  
+			li
+				label Height (inches) 
+				input type="number" name="height" value="152"
+
+			li
+				label Weight (pounds)
+				input type="number" name="weight" value="52"
+
+			li
+				label Age 
+				input type="number" name="age" value="15"
+	div
+		input type="submit"
+
