@@ -41,11 +41,11 @@ class Health_condition
      ob_min = run_single_value_db_query("select ob_min from weight_calc where height =#{user_height}")
      ob_max = run_single_value_db_query("select ob_max from weight_calc where height =#{user_height}")
     
-      if user_weight > n_min && user_weight < n_max
+      if user_weight >= n_min && user_weight <= n_max
         result =  "You are healthy"
-      elsif user_weight > ow_min && user_weight < ow_max
+      elsif user_weight >= ow_min && user_weight <= ow_max
         result =  "You are Overweight"
-      elsif user_weight > ob_min && user_weight < ob_max
+      elsif user_weight >= ob_min && user_weight <= ob_max
         result = "You are Obese"
       elsif user_weight > n_max && user_weight < ow_min
         result = "You are lingering between normal weight and Overweight"
